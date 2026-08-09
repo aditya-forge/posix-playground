@@ -1,14 +1,25 @@
-# Operating Systems Lab
+# 🖥️ SRM University AP — Operating Systems Lab
 
-This repository documents my Operating Systems Lab programs and Linux Ubuntu terminal workflows.
+Coursework repository for the **Operating Systems Lab** at **SRM University AP**. This repository documents weekly lab experiments, Linux terminal workflows, GCC compilation pipelines, system calls, and C program executions inside an Ubuntu WSL environment.
 
 ---
 
-## Repository Structure
+## 🏛️ Course Details
+
+- **Institution**: SRM University AP
+- **Course**: Operating Systems Lab (CSE)
+- **Environment**: Ubuntu Linux / WSL
+- **Compiler**: GCC (GNU Compiler Collection)
+- **Editor**: GNU Nano
+- **Terminal**: Bash CLI (`aditya-forge@LAPTOP-184D82EB`)
+
+---
+
+## 📁 Repository Structure
 
 ```text
 OS-Lab/
-├── README.md             <- Lab Overview & Ubuntu Terminal Architecture
+├── README.md             <- Main Lab Overview & Ubuntu Terminal Architecture
 ├── .gitignore            <- Git rules ignoring compiled Linux binaries (*.o, executables)
 └── Week-01/              <- Week 01: Linux Terminal Operations & C Programs
     ├── README.md         <- Week 01 Terminal Workflow Breakdown & Execution Logs
@@ -18,17 +29,17 @@ OS-Lab/
 
 ---
 
-## Completed Lab Sessions
+## 📅 Completed Lab Sessions
 
-| Directory | Topic / Focus | Key Terminal Operations |
-|---|---|---|
-| **[Week-01](Week-01/)** | **Linux Terminal Operations & Basic C Programs** | `nano`, `echo >`, `gcc`, `./binary`, `find`, `Ctrl+Z`, `explorer.exe .` |
+| Week | Directory | Topic / Focus | Key Terminal Operations |
+|---|---|---|---|
+| **Week 01** | **[Week-01](Week-01/)** | **Linux Terminal Operations & Basic C Programs** | `nano`, `echo >`, `gcc`, `./binary`, `find`, `Ctrl+Z`, `explorer.exe .` |
 
-> *New weekly lab directories (`Week-02`, `Week-03`, etc.) will be added as new lab sessions are completed.*
+> *Subsequent weekly lab directories (`Week-02`, `Week-03`, etc.) will be added as new lab sessions are completed.*
 
 ---
 
-## How Ubuntu Terminal Works (Environment Overview)
+## 🐧 How Ubuntu Terminal Works (Environment Overview)
 
 ```text
 +-------------------------------------------------------------------------------+
@@ -46,10 +57,10 @@ OS-Lab/
 
 ---
 
-## Core Linux Terminal Concepts Applied
+## 🛠️ Core Linux Terminal Concepts Applied
 
 ### 1. Terminal File Editing (`nano`)
-Edit files directly inside the Linux terminal without needing a GUI:
+Edit C source code directly inside the Linux terminal:
 ```bash
 nano Q6.c
 ```
@@ -89,9 +100,4 @@ explorer.exe .
 
 ---
 
-## How to Add New Lab Weeks
-
-When a new lab session is completed:
-1. Create a new directory (e.g., `Week-02`).
-2. Add your C files and terminal logs inside `Week-02/`.
-3. Add a line to the **Completed Lab Sessions** table in `README.md`.
+*Maintained by aditya-forge | SRM University AP — Operating Systems Lab*
