@@ -1,13 +1,13 @@
-# 🖥️ SRM University AP — Operating Systems Lab
+# 🖥️ SRM University AP — Operating Systems
 
-Coursework repository for the **Operating Systems Lab** at **SRM University AP**. This repository documents weekly lab experiments, Linux terminal workflows, GCC compilation pipelines, system calls, and C program executions inside an Ubuntu WSL environment.
+Coursework repository for **Operating Systems** at **SRM University AP**. This repository documents weekly practical experiments, Linux terminal workflows, GCC compilation pipelines, system calls, and C program executions inside an Ubuntu WSL environment.
 
 ---
 
 ## 🏛️ Course Details
 
 - **Institution**: SRM University AP
-- **Course**: Operating Systems Lab (CSE)
+- **Course**: Operating Systems (CSE)
 - **Environment**: Ubuntu Linux / WSL
 - **Compiler**: GCC (GNU Compiler Collection)
 - **Editor**: GNU Nano
@@ -18,8 +18,8 @@ Coursework repository for the **Operating Systems Lab** at **SRM University AP**
 ## 📁 Repository Structure
 
 ```text
-OS-Lab/
-├── README.md             <- Main Lab Overview & Ubuntu Terminal Architecture
+Operating-Systems/
+├── README.md             <- Main Coursework Overview & Ubuntu Terminal Architecture
 ├── .gitignore            <- Git rules ignoring compiled Linux binaries (*.o, executables)
 └── Week-01/              <- Week 01: Linux Terminal Operations & C Programs
     ├── README.md         <- Week 01 Terminal Workflow Breakdown & Execution Logs
@@ -29,13 +29,13 @@ OS-Lab/
 
 ---
 
-## 📅 Completed Lab Sessions
+## 📅 Completed Weekly Modules
 
 | Week | Directory | Topic / Focus | Key Terminal Operations |
 |---|---|---|---|
 | **Week 01** | **[Week-01](Week-01/)** | **Linux Terminal Operations & Basic C Programs** | `nano`, `echo >`, `gcc`, `./binary`, `find`, `Ctrl+Z`, `explorer.exe .` |
 
-> *Subsequent weekly lab directories (`Week-02`, `Week-03`, etc.) will be added as new lab sessions are completed.*
+> *Subsequent weekly module directories (`Week-02`, `Week-03`, etc.) will be added as new coursework modules are completed.*
 
 ---
 
@@ -86,7 +86,7 @@ Execute binaries in the current directory (`.`):
 ### 5. File System Search & Error Suppression (`2>/dev/null`)
 Search the filesystem while filtering out "Permission Denied" errors:
 ```bash
-find / -name "OS_Lab-1" 2>/dev/null
+find / -name "filename" 2>/dev/null
 ```
 
 ### 6. Job Control (`Ctrl + Z`)
@@ -100,4 +100,4 @@ explorer.exe .
 
 ---
 
-*Maintained by aditya-forge | SRM University AP — Operating Systems Lab*
+*Maintained by aditya-forge | SRM University AP — Operating Systems*

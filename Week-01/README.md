@@ -1,12 +1,12 @@
 # Week 01: Linux Terminal Operations & C Program Execution
 
-This directory documents **Week 01** of the Operating Systems Lab, focusing on **Ubuntu Terminal mechanics**, file handling, GCC compilation, process signals, and basic C program execution.
+This directory documents **Week 01** of Operating Systems coursework, focusing on **Ubuntu Terminal mechanics**, file handling, GCC compilation, process signals, and basic C program execution.
 
 ---
 
 ## Ubuntu Terminal Commands & Workflow Showcase
 
-Below is the breakdown of terminal concepts demonstrated in this lab session:
+Below is the breakdown of terminal concepts demonstrated in this module:
 
 ```text
 +-----------------------------------------------------------------------------------+
@@ -18,7 +18,7 @@ Below is the breakdown of terminal concepts demonstrated in this lab session:
 | 4. Directory Listing   : ls (Lists files with green highlight for executables)   |
 | 5. Compilation         : gcc QX.c -o QX                                           |
 | 6. Binary Execution    : ./QX                                                     |
-| 7. System Search       : find / -name "OS_Lab-1" 2>/dev/null                      |
+| 7. System Search       : find / -name "filename" 2>/dev/null                      |
 | 8. Job Suspension      : Ctrl+Z (Sends SIGTSTP to pause process)                  |
 | 9. Windows Bridge      : explorer.exe .                                           |
 +-----------------------------------------------------------------------------------+
@@ -37,7 +37,7 @@ aditya-forge@LAPTOP-184D82EB:~$ echo "Hello world this is a test" > file.txt
 
 # List files in working directory
 aditya-forge@LAPTOP-184D82EB:~$ ls
-OS_Lab-1  Q3  Q3.c  Q4  Q4.c  Q5  Q5.c  Q6  Q6.c  file.txt
+Q3  Q3.c  Q4  Q4.c  Q5  Q5.c  Q6  Q6.c  file.txt
 
 # Compile and Run Q6 (Character and Word Counter)
 aditya-forge@LAPTOP-184D82EB:~$ gcc Q6.c -o Q6
@@ -73,9 +73,9 @@ Enter a string: madam
 Palindrome
 
 # System Search & Job Suspension (Ctrl+Z)
-aditya-forge@LAPTOP-184D82EB:~$ find / -name "OS_Lab-1" 2>/dev/null
+aditya-forge@LAPTOP-184D82EB:~$ find / -name "filename" 2>/dev/null
 ^Z
-[2]+ Stopped                 find / -name "OS_Lab-1" 2>/dev/null
+[2]+ Stopped                 find / -name "filename" 2>/dev/null
 
 # Open current WSL directory in Windows File Explorer
 aditya-forge@LAPTOP-184D82EB:~$ explorer.exe .
@@ -102,8 +102,8 @@ aditya-forge@LAPTOP-184D82EB:~$ explorer.exe .
 - **Explanation**: Executes the binary named `Q6` in current directory (`.`). The `./` prefix is mandatory in Linux shells for executing binaries in the current path.
 
 ### 5. File Search & Error Redirection (`find` & `2>/dev/null`)
-- **Command**: `find / -name "OS_Lab-1" 2>/dev/null`
-- **Explanation**: Searches for `OS_Lab-1`. `2>/dev/null` suppresses "Permission Denied" errors by sending stderr (fd 2) to `/dev/null`.
+- **Command**: `find / -name "filename" 2>/dev/null`
+- **Explanation**: Searches for `filename`. `2>/dev/null` suppresses "Permission Denied" errors by sending stderr (fd 2) to `/dev/null`.
 
 ### 6. Job Control (`Ctrl + Z`)
 - **Command**: `^Z`
