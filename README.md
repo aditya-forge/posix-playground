@@ -20,6 +20,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | Week | Directory | Topic / Focus |
 |---|---|---|
 | **Week 01** | **[Week-01](Week-01/)** | Linux Terminal Operations & Basic C Programs |
+| **Week 02** | **[Week-02](Week-02/)** | Essential Linux Commands |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -31,10 +32,12 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 posix-playground/
 ├── README.md
 ├── .gitignore
-└── Week-01/
-    ├── README.md
-    ├── file.txt
-    └── Q1.c ... Q10.c
+├── Week-01/
+│   ├── README.md
+│   ├── file.txt
+│   └── Q1.c ... Q10.c
+└── Week-02/
+    └── README.md
 ```
 
 ---
