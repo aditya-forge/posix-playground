@@ -20,8 +20,8 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | Week | Directory | Topic / Focus |
 |---|---|---|
 | **Week 01** | **[Week-01](Week-01/)** | Linux Terminal Operations & Basic C Programs |
-| **Week 02** | **[Week-02](Week-02/)** | Essential Linux Commands |
 | **Week 03** | **[Week-03](Week-03/)** | Bash Shell Scripting & Script Automation |
+| **Week 04** | **[Week-04](Week-04/)** | Advanced Bash Scripting & File Processing |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -37,13 +37,13 @@ posix-playground/
 │   ├── README.md
 │   ├── file.txt
 │   └── Q1.c ... Q10.c
-├── Week-02/
-│   └── README.md
-└── Week-03/
+├── Week-03/
+│   ├── README.md
+│   ├── sample.txt
+│   └── greatest3.sh ... palindrome.sh
+└── Week-04/
     ├── README.md
-    ├── sample.txt
-    └── greatest3.sh, evenodd.sh, average.sh, prime.sh, numorstr.sh,
-        charword.sh, fibonacci.sh, factorial.sh, sumdigits.sh, palindrome.sh
+    └── p11.sh ... p20.sh
 ```
 
 ---
