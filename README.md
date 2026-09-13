@@ -22,6 +22,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 01** | **[Week-01](Week-01/)** | Linux Terminal Operations & Basic C Programs |
 | **Week 03** | **[Week-03](Week-03/)** | Bash Shell Scripting & Script Automation |
 | **Week 04** | **[Week-04](Week-04/)** | Advanced Bash Scripting & File Processing |
+| **Week 05** | **[Week-05](Week-05/)** | CPU Scheduling Algorithms (FCFS, SJF, SRTF) |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -41,9 +42,13 @@ posix-playground/
 │   ├── README.md
 │   ├── sample.txt
 │   └── greatest3.sh ... palindrome.sh
-└── Week-04/
+├── Week-04/
+│   ├── README.md
+│   └── p11.sh ... p20.sh
+└── Week-05/
     ├── README.md
-    └── p11.sh ... p20.sh
+    ├── scheduler.c
+    └── processes1.txt ... processes3.txt
 ```
 
 ---
