@@ -23,6 +23,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 03** | **[Week-03](Week-03/)** | Bash Shell Scripting & Script Automation |
 | **Week 04** | **[Week-04](Week-04/)** | Advanced Bash Scripting & File Processing |
 | **Week 05** | **[Week-05](Week-05/)** | CPU Scheduling Algorithms (FCFS, SJF, SRTF) |
+| **Week 06** | **[Week-06](Week-06/)** | CPU Scheduling — Priority (Non-Preemptive & Preemptive) & Round Robin |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -45,10 +46,17 @@ posix-playground/
 ├── Week-04/
 │   ├── README.md
 │   └── p11.sh ... p20.sh
-└── Week-05/
+├── Week-05/
+│   ├── README.md
+│   ├── scheduler.c
+│   └── processes1.txt ... processes3.txt
+└── Week-06/
     ├── README.md
-    ├── scheduler.c
-    └── processes1.txt ... processes3.txt
+    ├── priority_non_preemptive.c
+    ├── priority_preemptive.c
+    ├── round_robin.c
+    ├── processes_priority.txt
+    └── processes_rr.txt
 ```
 
 ---
