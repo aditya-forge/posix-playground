@@ -24,6 +24,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 04** | **[Week-04](Week-04/)** | Advanced Bash Scripting & File Processing |
 | **Week 05** | **[Week-05](Week-05/)** | CPU Scheduling Algorithms (FCFS, SJF, SRTF) |
 | **Week 06** | **[Week-06](Week-06/)** | CPU Scheduling — Priority (Non-Preemptive & Preemptive) & Round Robin |
+| **Week 07** | **[Week-07](Week-07/)** | CPU Scheduling — Highest Response Ratio Next (HRRN) |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -50,13 +51,19 @@ posix-playground/
 │   ├── README.md
 │   ├── scheduler.c
 │   └── processes1.txt ... processes3.txt
-└── Week-06/
+├── Week-06/
+│   ├── README.md
+│   ├── priority_non_preemptive.c
+│   ├── priority_preemptive.c
+│   ├── round_robin.c
+│   ├── processes_priority.txt
+│   └── processes_rr.txt
+└── Week-07/
     ├── README.md
-    ├── priority_non_preemptive.c
-    ├── priority_preemptive.c
-    ├── round_robin.c
-    ├── processes_priority.txt
-    └── processes_rr.txt
+    ├── hrrn.c
+    ├── processes_hrrn.txt
+    ├── CSE302_CPU_Scheduling - HRRN.pdf
+    └── OS_LAB_7.pdf
 ```
 
 ---
