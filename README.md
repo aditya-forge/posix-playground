@@ -25,6 +25,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 05** | **[Week-05](Week-05/)** | CPU Scheduling Algorithms (FCFS, SJF, SRTF) |
 | **Week 06** | **[Week-06](Week-06/)** | CPU Scheduling — Priority (Non-Preemptive & Preemptive) & Round Robin |
 | **Week 07** | **[Week-07](Week-07/)** | CPU Scheduling — Highest Response Ratio Next (HRRN) |
+| **Week 08** | **[Week-08](Week-08/)** | IPC & Producer-Consumer Race Conditions |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -58,12 +59,17 @@ posix-playground/
 │   ├── round_robin.c
 │   ├── processes_priority.txt
 │   └── processes_rr.txt
-└── Week-07/
+├── Week-07/
+│   ├── README.md
+│   ├── hrrn.c
+│   ├── processes_hrrn.txt
+│   ├── CSE302_CPU_Scheduling - HRRN.pdf
+│   └── OS_LAB_7.pdf
+└── Week-08/
     ├── README.md
-    ├── hrrn.c
-    ├── processes_hrrn.txt
-    ├── CSE302_CPU_Scheduling - HRRN.pdf
-    └── OS_LAB_7.pdf
+    ├── Makefile
+    ├── buffer.h, consumer.c, producer.c
+    └── stage1_observations.md
 ```
 
 ---
