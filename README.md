@@ -26,6 +26,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 06** | **[Week-06](Week-06/)** | CPU Scheduling — Priority (Non-Preemptive & Preemptive) & Round Robin |
 | **Week 07** | **[Week-07](Week-07/)** | CPU Scheduling — Highest Response Ratio Next (HRRN) |
 | **Week 08** | **[Week-08](Week-08/)** | IPC & Producer-Consumer Race Conditions |
+| **Week 09** | **[Week-09](Week-09/)** | Process Synchronization — Hardware Atomic Primitives (TAS & CAS) |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -65,11 +66,17 @@ posix-playground/
 │   ├── processes_hrrn.txt
 │   ├── CSE302_CPU_Scheduling - HRRN.pdf
 │   └── OS_LAB_7.pdf
-└── Week-08/
+├── Week-08/
+│   ├── README.md
+│   ├── Makefile
+│   ├── buffer.h, consumer.c, producer.c
+│   └── stage1_observations.md
+└── Week-09/
     ├── README.md
     ├── Makefile
-    ├── buffer.h, consumer.c, producer.c
-    └── stage1_observations.md
+    ├── producer_consumer.c
+    ├── OS_LAB_9_Report.pdf
+    └── output_case1_test_and_set.log ... output_case3_no_lock.log
 ```
 
 ---
