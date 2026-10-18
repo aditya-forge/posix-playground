@@ -1,0 +1,36 @@
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ gcc -pthread -DUSE_LOCK=0 -DNUM_PRODUCERS=1 -DNUM_CONSUMERS=1 producer_consumer.c -o pc_nolock
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./pc_nolock
+Lock type : test_and_set (USE_CAS 0)
+Lock used : NO (race experiment)
+Config    : 1 producer(s), 1 consumer(s), 10 items each, buffer size 5
+
+Producer 1 produced item 100 | counter = 1
+Producer 1 produced item 101 | counter = 1
+...
+Consumer 1 consumed item 108 | counter = 0
+Consumer 1 consumed item 109 | counter = 0
+
+Total produced = 10
+Total consumed = 10
+Max counter observed = 5 (limit 5)
+Invariant violations detected = 0
+
+Final counter = 0 (expected 0)
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./pc_nolock
+Lock type : test_and_set (USE_CAS 0)
+Lock used : NO (race experiment)
+Config    : 1 producer(s), 1 consumer(s), 10 items each, buffer size 5
+
+Producer 1 produced item 100 | counter = 1
+Consumer 1 consumed item 100 | counter = 0
+...
+Consumer 1 consumed item 108 | counter = 1
+Consumer 1 consumed item 109 | counter = 1
+
+Total produced = 10
+Total consumed = 10
+Max counter observed = 2 (limit 5)
+Invariant violations detected = 0
+
+Final counter = 1 (expected 0)

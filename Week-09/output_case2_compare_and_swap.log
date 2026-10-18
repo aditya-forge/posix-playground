@@ -1,0 +1,72 @@
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ gcc -pthread -DUSE_CAS=1 producer_consumer.c -o pc_cas
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./pc_cas
+Lock type : compare_and_swap (USE_CAS 1)
+Lock used : yes
+Config    : 3 producer(s), 3 consumer(s), 10 items each, buffer size 5
+
+Producer 2 produced item 200 | counter = 1
+Producer 2 produced item 201 | counter = 2
+Producer 2 produced item 202 | counter = 3
+Producer 2 produced item 203 | counter = 4
+Producer 2 produced item 204 | counter = 5
+Consumer 1 consumed item 200 | counter = 4
+Consumer 1 consumed item 201 | counter = 3
+Consumer 1 consumed item 202 | counter = 2
+Consumer 1 consumed item 203 | counter = 1
+Consumer 1 consumed item 204 | counter = 0
+Producer 1 produced item 100 | counter = 1
+Producer 1 produced item 101 | counter = 2
+Producer 1 produced item 102 | counter = 3
+Producer 1 produced item 103 | counter = 4
+Producer 1 produced item 104 | counter = 5
+Consumer 1 consumed item 100 | counter = 4
+Consumer 1 consumed item 101 | counter = 3
+Consumer 1 consumed item 102 | counter = 2
+Consumer 1 consumed item 103 | counter = 1
+Consumer 1 consumed item 104 | counter = 0
+Producer 1 produced item 105 | counter = 1
+Producer 1 produced item 106 | counter = 2
+Producer 1 produced item 107 | counter = 3
+Producer 1 produced item 108 | counter = 4
+Producer 1 produced item 109 | counter = 5
+Consumer 2 consumed item 105 | counter = 4
+Consumer 2 consumed item 106 | counter = 3
+Consumer 2 consumed item 107 | counter = 2
+Consumer 2 consumed item 108 | counter = 1
+Consumer 2 consumed item 109 | counter = 0
+Producer 2 produced item 205 | counter = 1
+Producer 2 produced item 206 | counter = 2
+Producer 2 produced item 207 | counter = 3
+Producer 2 produced item 208 | counter = 4
+Producer 2 produced item 209 | counter = 5
+Consumer 3 consumed item 205 | counter = 4
+Consumer 3 consumed item 206 | counter = 3
+Consumer 3 consumed item 207 | counter = 2
+Consumer 3 consumed item 208 | counter = 1
+Consumer 3 consumed item 209 | counter = 0
+Producer 3 produced item 300 | counter = 1
+Producer 3 produced item 301 | counter = 2
+Producer 3 produced item 302 | counter = 3
+Producer 3 produced item 303 | counter = 4
+Producer 3 produced item 304 | counter = 5
+Consumer 2 consumed item 300 | counter = 4
+Consumer 2 consumed item 301 | counter = 3
+Consumer 2 consumed item 302 | counter = 2
+Consumer 2 consumed item 303 | counter = 1
+Consumer 2 consumed item 304 | counter = 0
+Producer 3 produced item 305 | counter = 1
+Producer 3 produced item 306 | counter = 2
+Producer 3 produced item 307 | counter = 3
+Producer 3 produced item 308 | counter = 4
+Producer 3 produced item 309 | counter = 5
+Consumer 3 consumed item 305 | counter = 4
+Consumer 3 consumed item 306 | counter = 3
+Consumer 3 consumed item 307 | counter = 2
+Consumer 3 consumed item 308 | counter = 1
+Consumer 3 consumed item 309 | counter = 0
+
+Total produced = 30
+Total consumed = 30
+Max counter observed = 5 (limit 5)
+
+Final counter = 0 (expected 0)

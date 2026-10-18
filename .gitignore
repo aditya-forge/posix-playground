@@ -1,4 +1,4 @@
-# Executables & Binaries
+﻿# Executables & Binaries
 *.exe
 *.o
 *.out
@@ -20,3 +20,6 @@ Q10
 .idea/
 scheduler
 hrrn
+pc_tas
+pc_cas
+pc_nolock
