@@ -1,0 +1,109 @@
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in3_a.txt
+3
+P1 0 10 1
+P2 1 50 4
+P3 2 15 2
+100
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./hrrn_priority < in3_a.txt
+Process  AT  BT  PR
+P1        0  10   1
+P2        1  50   4
+P3        2  15   2
+Starvation threshold = 100
+
+Decision 1 at t = 0
+  Eligible: P1
+  P1: W=0, weight=1.0, ARR=(0+10)/(10*1.0) = 1.000
+  Chosen : P1 (Only eligible process)
+
+Decision 2 at t = 10
+  Eligible: P2, P3
+  P2: W=9, weight=1.6, ARR=(9+50)/(50*1.6) = 0.737
+  P3: W=8, weight=1.2, ARR=(8+15)/(15*1.2) = 1.278
+  Chosen : P3 (Highest ARR)
+
+Decision 3 at t = 25
+  Eligible: P2
+  P2: W=24, weight=1.6, ARR=(24+50)/(50*1.6) = 0.925
+  Chosen : P2 (Only eligible process)
+
+Order of execution: P1 -> P3 -> P2
+
+Process  AT  BT  PR   CT  TAT   WT
+P1        0  10   1   10   10    0
+P2        1  50   4   75   74   24
+P3        2  15   2   25   23    8
+Average TAT = 35.67, Average WT = 10.67
+
+Processes that triggered anti-starvation: None
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in3_b.txt
+6
+P1 0 5 1
+P2 1 20 5
+P3 2 4 1
+P4 3 6 2
+P5 4 3 1
+P6 10 2 1
+15
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./hrrn_priority < in3_b.txt
+Process  AT  BT  PR
+P1        0   5   1
+P2        1  20   5
+P3        2   4   1
+P4        3   6   2
+P5        4   3   1
+P6       10   2   1
+Starvation threshold = 15
+
+Decision 1 at t = 0
+  Eligible: P1
+  P1: W=0, weight=1.0, ARR=(0+5)/(5*1.0) = 1.000
+  Chosen : P1 (Only eligible process)
+
+Decision 2 at t = 5
+  Eligible: P2, P3, P4, P5
+  P2: W=4, weight=1.8, ARR=(4+20)/(20*1.8) = 0.667
+  P3: W=3, weight=1.0, ARR=(3+4)/(4*1.0) = 1.750
+  P4: W=2, weight=1.2, ARR=(2+6)/(6*1.2) = 1.111
+  P5: W=1, weight=1.0, ARR=(1+3)/(3*1.0) = 1.333
+  Chosen : P3 (Highest ARR)
+
+Decision 3 at t = 9
+  Eligible: P2, P4, P5
+  P2: W=8, weight=1.8, ARR=(8+20)/(20*1.8) = 0.778
+  P4: W=6, weight=1.2, ARR=(6+6)/(6*1.2) = 1.667
+  P5: W=5, weight=1.0, ARR=(5+3)/(3*1.0) = 2.667
+  Chosen : P5 (Highest ARR)
+
+Decision 4 at t = 12
+  Eligible: P2, P4, P6
+  P2: W=11, weight=1.8, ARR=(11+20)/(20*1.8) = 0.861
+  P4: W=9, weight=1.2, ARR=(9+6)/(6*1.2) = 2.083
+  P6: W=2, weight=1.0, ARR=(2+2)/(2*1.0) = 2.000
+  Chosen : P4 (Highest ARR)
+
+Decision 5 at t = 18
+  Eligible: P2, P6
+  P2: W=17, RR=(17+20)/20 = 1.850 <-- waiting > threshold
+  P6: W=8, RR=(8+2)/2 = 5.000
+  Chosen : P2 (Anti-starvation: Highest RR)
+
+Decision 6 at t = 38
+  Eligible: P6
+  P6: W=28, RR=(28+2)/2 = 15.000 <-- waiting > threshold
+  Chosen : P6 (Anti-starvation: Highest RR)
+
+Order of execution: P1 -> P3 -> P5 -> P4 -> P2 -> P6
+
+Process  AT  BT  PR   CT  TAT   WT
+P1        0   5   1    5    5    0
+P2        1  20   5   38   37   17
+P3        2   4   1    9    7    3
+P4        3   6   2   18   15    9
+P5        4   3   1   12    8    5
+P6       10   2   1   40   30   28
+Average TAT = 17.00, Average WT = 10.33
+
+Processes that triggered anti-starvation: P2, P6
+

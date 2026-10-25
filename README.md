@@ -27,6 +27,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 07** | **[Week-07](Week-07/)** | CPU Scheduling — Highest Response Ratio Next (HRRN) |
 | **Week 08** | **[Week-08](Week-08/)** | IPC & Producer-Consumer Race Conditions |
 | **Week 09** | **[Week-09](Week-09/)** | Process Synchronization — Hardware Atomic Primitives (TAS & CAS) |
+| **Week 10** | **[Week-10](Week-10/)** | Advanced CPU Scheduling (SRTF with CS, Dynamic RR, HRRN with Priority, RMS) |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -71,12 +72,19 @@ posix-playground/
 │   ├── Makefile
 │   ├── buffer.h, consumer.c, producer.c
 │   └── stage1_observations.md
-└── Week-09/
+├── Week-09/
+│   ├── README.md
+│   ├── Makefile
+│   ├── producer_consumer.c
+│   ├── OS_LAB_9_Report.pdf
+│   └── output_case1_test_and_set.log ... output_case3_no_lock.log
+└── Week-10/
     ├── README.md
     ├── Makefile
-    ├── producer_consumer.c
-    ├── OS_LAB_9_Report.pdf
-    └── output_case1_test_and_set.log ... output_case3_no_lock.log
+    ├── srtf_cs.c, rr_dynamic.c, hrrn_priority.c, rms.c
+    ├── in1_a.txt ... in4_c.txt
+    ├── output_assignment1_srtf_cs.log ... output_assignment4_rms.log
+    └── Week 10.pdf
 ```
 
 ---

@@ -1,0 +1,87 @@
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in1_a.txt
+3
+P1 0 10
+P2 4 6
+P3 5 2
+2
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./srtf_cs < in1_a.txt
+Process  AT  BT
+P1        0  10
+P2        4   6
+P3        5   2
+Context switch overhead C = 2
+
+Gantt Chart:
+0-CS-2-P1-5-CS-7-P3-9-CS-11-P2-17-CS-19-P1-26
+
+Process  AT  BT   CT  TAT   WT
+P1        0  10   26   26   16
+P2        4   6   17   13    7
+P3        5   2    9    4    2
+Average TAT = 14.33, Average WT = 8.33
+
+Total context switches = 4
+Total time on switches = 8
+Total busy time = 18
+Total timeline length = 26
+CPU efficiency = 18 / 26 x 100 = 69.23%
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in1_b.txt
+4
+P1 0 8
+P2 1 4
+P3 2 9
+P4 3 5
+1
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./srtf_cs < in1_b.txt
+Process  AT  BT
+P1        0   8
+P2        1   4
+P3        2   9
+P4        3   5
+Context switch overhead C = 1
+
+Gantt Chart:
+0-CS-1-P2-5-CS-6-P4-11-CS-12-P1-20-CS-21-P3-30
+
+Process  AT  BT   CT  TAT   WT
+P1        0   8   20   20   12
+P2        1   4    5    4    0
+P3        2   9   30   28   19
+P4        3   5   11    8    3
+Average TAT = 15.00, Average WT = 8.50
+
+Total context switches = 4
+Total time on switches = 4
+Total busy time = 26
+Total timeline length = 30
+CPU efficiency = 26 / 30 x 100 = 86.67%
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in1_c.txt
+3
+P1 0 10
+P2 4 6
+P3 5 2
+5
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./srtf_cs < in1_c.txt
+Process  AT  BT
+P1        0  10
+P2        4   6
+P3        5   2
+Context switch overhead C = 5
+
+Gantt Chart:
+0-CS-5-P3-7-CS-12-P2-18-CS-23-P1-33
+
+Process  AT  BT   CT  TAT   WT
+P1        0  10   33   33   23
+P2        4   6   18   14    8
+P3        5   2    7    2    0
+Average TAT = 16.33, Average WT = 10.33
+
+Total context switches = 3
+Total time on switches = 15
+Total busy time = 18
+Total timeline length = 33
+CPU efficiency = 18 / 33 x 100 = 54.55%
+

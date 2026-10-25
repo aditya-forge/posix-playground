@@ -1,0 +1,87 @@
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in2_a.txt
+4
+P1 0 12
+P2 1 8
+P3 3 18
+P4 5 2
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./rr_dynamic < in2_a.txt
+Process  AT  BT
+P1        0  12
+P2        1   8
+P3        3  18
+P4        5   2
+
+Gantt Chart:
+0-P1-12-P2-17-P3-22-P4-24-P2-27-P3-40
+
+Cycle | TQ | Processes in RQ      | Remaining times
+    1 | 12 | [P1]                 | [12]
+    2 |  5 | [P2, P3, P4]         | [8, 18, 2]
+    3 |  4 | [P2, P3]             | [3, 13]
+    4 |  5 | [P3]                 | [9]
+    5 |  2 | [P3]                 | [4]
+    6 |  1 | [P3]                 | [2]
+    7 |  1 | [P3]                 | [1]
+
+Process  AT  BT   CT  TAT   WT
+P1        0  12   12   12    0
+P2        1   8   27   26   18
+P3        3  18   40   37   19
+P4        5   2   24   19   17
+Average TAT = 23.50, Average WT = 13.50
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in2_b.txt
+4
+P1 0 6
+P2 0 3
+P3 0 9
+P4 0 4
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./rr_dynamic < in2_b.txt
+Process  AT  BT
+P1        0   6
+P2        0   3
+P3        0   9
+P4        0   4
+
+Gantt Chart:
+0-P1-5-P2-8-P3-13-P4-17-P1-18-P3-22
+
+Cycle | TQ | Processes in RQ      | Remaining times
+    1 |  5 | [P1, P2, P3, P4]     | [6, 3, 9, 4]
+    2 |  2 | [P1, P3]             | [1, 4]
+    3 |  1 | [P3]                 | [2]
+    4 |  1 | [P3]                 | [1]
+
+Process  AT  BT   CT  TAT   WT
+P1        0   6   18   18   12
+P2        0   3    8    8    5
+P3        0   9   22   22   13
+P4        0   4   17   17   13
+Average TAT = 16.25, Average WT = 10.75
+
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ cat in2_c.txt
+3
+P1 0 4
+P2 10 6
+P3 11 3
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ ./rr_dynamic < in2_c.txt
+Process  AT  BT
+P1        0   4
+P2       10   6
+P3       11   3
+
+Gantt Chart:
+0-P1-4-IDLE-10-P2-14-P3-16-P2-18-P3-19
+
+Cycle | TQ | Processes in RQ      | Remaining times
+    1 |  4 | [P1]                 | [4]
+    2 |  4 | [P2]                 | [6]
+    3 |  2 | [P3, P2]             | [3, 2]
+    4 |  1 | [P3]                 | [1]
+
+Process  AT  BT   CT  TAT   WT
+P1        0   4    4    4    0
+P2       10   6   18    8    2
+P3       11   3   19    8    5
+Average TAT = 6.67, Average WT = 2.33
+

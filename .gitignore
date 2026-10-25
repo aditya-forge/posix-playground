@@ -1,4 +1,4 @@
-﻿# Executables & Binaries
+# Executables & Binaries
 *.exe
 *.o
 *.out
@@ -23,3 +23,8 @@ hrrn
 pc_tas
 pc_cas
 pc_nolock
+srtf_cs
+rr_dynamic
+hrrn_priority
+rms
+*.zip
