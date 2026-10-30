@@ -28,6 +28,7 @@ Coursework repository for **Operating Systems** at **SRM University AP**. Weekly
 | **Week 08** | **[Week-08](Week-08/)** | IPC & Producer-Consumer Race Conditions |
 | **Week 09** | **[Week-09](Week-09/)** | Process Synchronization — Hardware Atomic Primitives (TAS & CAS) |
 | **Week 10** | **[Week-10](Week-10/)** | Advanced CPU Scheduling (SRTF with CS, Dynamic RR, HRRN with Priority, RMS) |
+| **Week 11** | **[Week-11](Week-11/)** | Process Synchronization — POSIX Semaphores & Deadlock Demonstration |
 
 > *New weekly directories will be added as coursework modules are completed.*
 
@@ -78,13 +79,19 @@ posix-playground/
 │   ├── producer_consumer.c
 │   ├── OS_LAB_9_Report.pdf
 │   └── output_case1_test_and_set.log ... output_case3_no_lock.log
-└── Week-10/
+├── Week-10/
+│   ├── README.md
+│   ├── Makefile
+│   ├── srtf_cs.c, rr_dynamic.c, hrrn_priority.c, rms.c
+│   ├── in1_a.txt ... in4_c.txt
+│   ├── output_assignment1_srtf_cs.log ... output_assignment4_rms.log
+│   └── Week 10.pdf
+└── Week-11/
     ├── README.md
     ├── Makefile
-    ├── srtf_cs.c, rr_dynamic.c, hrrn_priority.c, rms.c
-    ├── in1_a.txt ... in4_c.txt
-    ├── output_assignment1_srtf_cs.log ... output_assignment4_rms.log
-    └── Week 10.pdf
+    ├── producer_consumer_sem.c
+    ├── output_case1_3p3c.log, output_case2_1p1c.log, output_case3_deadlock.log
+    └── Week11_Report.pdf
 ```
 
 ---

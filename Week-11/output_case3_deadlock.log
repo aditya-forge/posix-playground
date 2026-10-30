@@ -1,0 +1,14 @@
+# For case-3: semaphore order swapped (mutex taken first), 1 producer, 1 consumer, 50 items: deadlock
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ gcc -pthread -DSWAP_ORDER=1 -DNUM_PRODUCERS=1 -DNUM_CONSUMERS=1 -DITEMS_PER_THREAD=50 producer_consumer_sem.c -o pc_sem_deadlock
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ timeout 5 ./pc_sem_deadlock
+Semaphores : empty_slots = 5, full_slots = 0, mutex = 1
+Wait order : mutex first (WRONG, deadlock demo)
+Config     : 1 producer(s), 1 consumer(s), 50 items per producer, buffer size 5
+
+Producer 1 produced item 100 | counter = 1
+Producer 1 produced item 101 | counter = 2
+Producer 1 produced item 102 | counter = 3
+Producer 1 produced item 103 | counter = 4
+Producer 1 produced item 104 | counter = 5
+aditya-forge@LAPTOP-184D82EB:~/os_lab$ echo $?
+124
