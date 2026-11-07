@@ -1,0 +1,89 @@
+# All test runs (command, then observed output)
+
+$ ./bankers < tests/test1_sample.txt
+SAFE: 1 3 4 0 2
+
+GRANTED
+
+(exit status 0)
+
+$ ./bankers < tests/test2_safe_grant.txt
+SAFE: 1 2 3 0
+
+GRANTED
+
+SAFE: 3 1 2 0
+
+(exit status 0)
+
+$ ./bankers < tests/test3_exceeds_claim.txt
+DENIED: exceeds maximum claim
+
+DENIED: exceeds maximum claim
+
+SAFE: 1 3 4 0 2
+
+(exit status 0)
+
+$ ./bankers < tests/test4_unsafe_request.txt
+GRANTED
+
+DENIED: insufficient resources
+
+DENIED: would lead to unsafe state
+
+SAFE: 1 3 4 0 2
+
+(exit status 0)
+
+$ ./bankers < tests/test5_zero_request.txt
+GRANTED
+
+SAFE: 1 3 4 0 2
+
+GRANTED
+
+(exit status 0)
+
+$ ./bankers < tests/test6_unsafe_state.txt
+UNSAFE
+
+DENIED: would lead to unsafe state
+
+(exit status 0)
+
+$ ./bankers < tests/bad1_alloc_exceeds_max.txt
+Error: Allocation[0][0] is greater than Max[0][0]
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad2_negative_available.txt
+Error: Available[0] = -1 is out of range [0, 1000]
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad3_too_few_tokens.txt
+Error: input ended early, missing Q
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad4_extra_tokens.txt
+Error: unexpected extra input 'S' after the last query
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad5_unknown_query.txt
+Error: unknown query 'X' (expected S or R)
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad6_process_out_of_range.txt
+Error: process index of request = 5 is out of range [0, 1]
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad7_zero_processes.txt
+Error: N = 0 is out of range [1, 20]
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad8_non_numeric.txt
+Error: '1.5' is not a valid integer (Available[0])
+(stdout empty, exit status 1)
+
+$ ./bankers < tests/bad9_negative_request.txt
+Error: request amount = -1 is out of range [0, 1000]
+(stdout empty, exit status 1)
